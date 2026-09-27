@@ -1,0 +1,51 @@
+.services-section {
+  padding: 5rem 0;
+  background-color: #f7f6f4;
+  width: 100%;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 3.5rem 0;
+  }
+
+  .services-grid {
+    display: grid;
+    // Use minmax with min() to ensure grid items never overflow mobile viewports
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .service-card {
+    background-color: $surface-card;
+    border: 1px solid $border-subtle;
+    padding: 2.5rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(22, 30, 41, 0.03);
+
+    @media (max-width: 480px) {
+      padding: 1.75rem;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+      color: $structural-navy;
+    }
+
+    p {
+      color: $text-muted;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: $structural-navy;
+    }
+  }
+}

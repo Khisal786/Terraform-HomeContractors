@@ -1,0 +1,55 @@
+<section class="estimate-section" id="contact">
+  <div class="container">
+    <div class="estimate-wrapper">
+      <div class="estimate-info">
+        <span class="sub-heading">START YOUR PROJECT</span>
+        <h2>Request a Design Consultation</h2>
+        <p>Ready to transform your property? Fill out the details below, and it will instantly connect you or our team directly via WhatsApp with your project scope.</p>
+        
+        <div class="contact-direct">
+          <div class="direct-item">
+            <strong>Direct Line:</strong>
+            <a href="tel:5125550199">(512) 555-0199</a>
+          </div>
+          <div class="direct-item">
+            <strong>Service Radius:</strong>
+            <span>Greater Metropolitan Area & Suburbs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- WhatsApp Dispatch Form -->
+      <form id="estimateForm" class="estimate-form" onsubmit="sendToWhatsApp(event)">
+        <div class="form-group">
+          <label for="clientName">Full Name</label>
+          <input type="text" id="clientName" name="client_name" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="clientPhone">Phone Number</label>
+            <input type="tel" id="clientPhone" name="client_phone" placeholder="(555) 000-0000" required>
+          </div>
+          <div class="form-group">
+            <label for="projectType">Project Scope</label>
+            <select id="projectType" name="project_type" required>
+              <option value="" disabled selected>Select category...</option>
+              <option value="Custom Hardscape & Patio">Custom Hardscape & Patio</option>
+              <option value="Outdoor Living & Kitchen">Outdoor Living & Kitchen</option>
+              <option value="Luxury Interior Remodel">Luxury Interior Remodel</option>
+              <option value="Full Property Transformation">Full Property Transformation</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="projectDetails">Tell us about your vision</label>
+          <textarea id="projectDetails" name="project_details" rows="4" placeholder="Approximate dimensions, materials preferred, or specific goals..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary btn-block" id="submitBtn">Send Request via WhatsApp</button>
+        <div id="formStatus" class="form-status"></div>
+      </form>
+    </div>
+  </div>
+</section>

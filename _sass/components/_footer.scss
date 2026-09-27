@@ -1,0 +1,45 @@
+@use "sass:color";
+
+.site-footer {
+  background-color: color.adjust($structural-navy, $lightness: -3%);
+  border-top: 1px solid $border-subtle;
+  padding: 4rem 0 2rem 0;
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .footer-col {
+    h3 { 
+      font-size: 1.1rem; 
+      margin-bottom: 1rem; 
+      letter-spacing: 1px; 
+      color: $accent-terracotta; 
+    }
+    h4 { 
+      font-size: 1rem; 
+      margin-bottom: 1rem; 
+      color: $structural-navy; /* Updated to match your variable */
+    }
+    p { 
+      color: $text-muted; 
+      font-size: 0.9rem; 
+      margin-bottom: 0.5rem; 
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid $border-subtle;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: $text-muted;
+  }
+}

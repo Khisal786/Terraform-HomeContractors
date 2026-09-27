@@ -1,0 +1,34 @@
+<section class="portfolio-section" id="work">
+  <div class="container">
+    <div class="section-header">
+      <span class="sub-heading">OUR RECENT CRAFT</span>
+      <h2>Featured Transformations</h2>
+      <p>Explore our recent custom hardscape, outdoor living, and remodeling projects.</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="portfolio-filters">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="hardscapes">Hardscapes</button>
+      <button class="filter-btn" data-filter="outdoor_living">Outdoor Living</button>
+      <button class="filter-btn" data-filter="remodeling">Remodeling</button>
+    </div>
+
+    <!-- Project Grid -->
+    <div class="portfolio-grid">
+      {% for item in site.data.portfolio %}
+        <div class="portfolio-card" data-category="{{ item.category }}">
+          <div class="portfolio-image-wrapper">
+            <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" loading="lazy">
+            <span class="portfolio-location">{{ item.location }}</span>
+          </div>
+          <div class="portfolio-content">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+            <span class="portfolio-specs">{{ item.specs }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

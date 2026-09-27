@@ -1,0 +1,154 @@
+.portfolio-section {
+  padding: 5rem 0;
+  width: 100%;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 3.5rem 0;
+  }
+
+  .portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .filter-btn {
+      background: $surface-card;
+      border: 1px solid $border-subtle;
+      color: $text-muted;
+      padding: 0.5rem 1.25rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+
+      &.active, &:hover {
+        background-color: $accent-terracotta;
+        color: #ffffff;
+        border-color: $accent-terracotta;
+      }
+    }
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .portfolio-card {
+    background-color: $surface-card;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid $border-subtle;
+    box-shadow: 0 4px 20px rgba(22, 30, 41, 0.03);
+
+    .portfolio-image-wrapper {
+      position: relative;
+      height: 240px;
+      background-color: #e2e5e8;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .portfolio-location {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        background-color: rgba($structural-navy, 0.85);
+        backdrop-filter: blur(4px);
+        padding: 0.25rem 0.75rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        border-radius: 3px;
+        color: #ffffff;
+      }
+    }
+
+    .portfolio-content {
+      padding: 1.5rem;
+
+      @media (max-width: 480px) {
+        padding: 1.25rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: $structural-navy;
+      }
+
+      p {
+        color: $text-muted;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .portfolio-specs {
+        display: block;
+        font-size: 0.8rem;
+        color: $accent-terracotta;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.testimonials-section {
+  padding: 5rem 0;
+  background-color: #f7f6f4;
+  width: 100%;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 3.5rem 0;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .testimonial-card {
+    background-color: $surface-card;
+    padding: 2.5rem;
+    border-radius: 6px;
+    border: 1px solid $border-subtle;
+    box-shadow: 0 4px 20px rgba(22, 30, 41, 0.03);
+
+    @media (max-width: 480px) {
+      padding: 1.75rem;
+    }
+
+    .stars {
+      color: $accent-terracotta;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-style: italic;
+      color: $structural-navy;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .client-meta {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.85rem;
+
+      strong { color: $structural-navy; }
+      span { color: $text-muted; }
+    }
+  }
+}

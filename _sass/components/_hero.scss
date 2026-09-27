@@ -1,0 +1,84 @@
+.hero-section {
+  padding: 6rem 0 5rem 0;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(rgba($bg-canvas, 0.92), rgba($bg-canvas, 0.97)), url('../images/demos/hero-bg.jpg') center/cover no-repeat;
+
+  @media (max-width: 768px) {
+    padding: 4rem 0 3rem 0;
+  }
+
+  .hero-content {
+    max-width: 750px;
+    width: 100%;
+    
+    h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      color: $structural-navy;
+
+      @media (max-width: 768px) {
+        font-size: 2.1rem;
+      }
+    }
+
+    p {
+      font-size: 1.15rem;
+      color: $text-muted;
+      margin-bottom: 2rem;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn-primary {
+        background-color: $accent-terracotta;
+        color: #ffffff;
+        padding: 0.85rem 1.75rem;
+        font-weight: 600;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: opacity 0.2s;
+        display: inline-block;
+        text-align: center;
+
+        &:hover { opacity: 0.9; }
+
+        @media (max-width: 480px) {
+          width: 100%;
+        }
+      }
+
+      .btn-outline {
+        border: 1px solid $border-subtle;
+        background-color: $surface-card;
+        color: $structural-navy;
+        padding: 0.85rem 1.75rem;
+        font-weight: 600;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: border-color 0.2s;
+        display: inline-block;
+        text-align: center;
+
+        &:hover { border-color: $accent-terracotta; }
+
+        @media (max-width: 480px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+---
+layout: default
+title: "Elite Landscaping & Custom Remodeling"
+---
+
+<!-- Hero Section -->
+<section class="hero-section" id="home">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <span class="sub-heading">AUSTIN’S PREMIER DESIGN-BUILD FIRM</span>
+      <h1>Architectural Hardscapes & Bespoke Living Spaces</h1>
+      <p>We transform ordinary properties into breathtaking outdoor sanctuaries and luxury interior environments through uncompromising craftsmanship.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Request Free Estimate</a>
+        <a href="#work" class="btn-outline">Explore Our Portfolio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid Section -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="sub-heading">WHAT WE DO</span>
+      <h2>Mastery in Every Square Foot</h2>
+      <p>From complex multi-level hardscapes to structural gut-remodels, our in-house team executes every phase with absolute precision.</p>
+    </div>
+    
+    <div class="services-grid">
+      {% for service in site.data.services %}
+        <div class="service-card">
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.subtitle }}</p>
+          <ul class="service-features">
+            {% for feature in service.features %}
+              <li>✓ {{ feature }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Grid Section -->
+{% include portfolio_grid.html %}
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="sub-heading">CLIENT VERIFICATION</span>
+      <h2>Trusted by Homeowners Across Austin</h2>
+    </div>
+    <div class="testimonials-grid">
+      {% for testimonial in site.data.testimonials %}
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"{{ testimonial.review }}"</p>
+          <div class="client-meta">
+            <strong>{{ testimonial.client_name }}</strong>
+            <span>{{ testimonial.neighborhood }} • {{ testimonial.project_type }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Contact / Estimate Section -->
+{% include estimate_form.html %}

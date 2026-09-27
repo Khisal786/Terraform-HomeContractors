@@ -1,0 +1,17 @@
+- id: hardscapes
+  title: "Custom Patios & Hardscaping"
+  subtitle: "Natural stone, flagstone, and modern porcelain pavers engineered for lifetime durability."
+  icon_class: "icon-stone"
+  features: ["Travertine & Flagstone Patios", "Retaining & Seating Walls", "Custom Walkways & Driveways"]
+
+- id: outdoor_living
+  title: "Outdoor Living & Kitchens"
+  subtitle: "Turn your backyard into an all-season entertainment oasis with built-in culinary spaces."
+  icon_class: "icon-kitchen"
+  features: ["Custom Pergolas & Pavilions", "Outdoor Kitchens & Grills", "Fire Pits & Outdoor Fireplaces"]
+
+- id: remodeling
+  title: "Luxury Interior Remodeling"
+  subtitle: "Bespoke kitchen, bathroom, and structural main-floor overhauls crafted with precision."
+  icon_class: "icon-remodel"
+  features: ["Chef's Kitchen Renovations", "Master Bath Spa Conversions", "Open-Concept Structural Layouts"]

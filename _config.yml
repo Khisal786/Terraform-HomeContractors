@@ -1,0 +1,14 @@
+title: "Terraform & Craft | Elite Landscaping & Remodeling"
+email: "estimates@terraformcraft.com"
+description: "Bespoke hardscaping, outdoor living, and luxury interior remodeling in Austin, TX."
+baseurl: "/Terraform-HomeContractors"
+url: "https://khisal786.github.io"
+
+markdown: kramdown
+highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

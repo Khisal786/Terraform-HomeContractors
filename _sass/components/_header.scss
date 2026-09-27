@@ -1,0 +1,86 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba($bg-canvas, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $border-subtle;
+  padding: 1rem 0;
+  width: 100%;
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+
+    @media (max-width: 480px) {
+      padding: 0 1rem;
+    }
+  }
+
+  .brand-logo {
+    font-family: $font-heading;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: $structural-navy;
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    span {
+      color: $accent-terracotta;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      gap: 1rem;
+    }
+
+    a {
+      color: $text-muted;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95srem;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $structural-navy;
+      }
+
+      @media (max-width: 480px) {
+        display: none; // Hide standard nav links on very small screens, keep CTA
+      }
+    }
+
+    .nav-cta {
+      background-color: $accent-terracotta;
+      color: #ffffff;
+      padding: 0.6rem 1.25rem;
+      border-radius: 4px;
+      font-weight: 600;
+
+      &:hover {
+        opacity: 0.9;
+        color: #ffffff;
+      }
+
+      @media (max-width: 480px) {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
