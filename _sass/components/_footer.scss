@@ -1,7 +1,7 @@
 @use "sass:color";
 
 .site-footer {
-  background-color: color.adjust($structural-navy, $lightness: -3%);
+  background-color: #121821;
   border-top: 1px solid $border-subtle;
   padding: 4rem 0 2rem 0;
 
